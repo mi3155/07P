@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="/list">
+<div th:text="${dto.id}"></div>
+<div th:text="${dto.memoText}"></div>
+    <button class="btn btn-primary w-100" type="submit">리스트 이동</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="w-75" style="margin:100px auto">
+    <th:block >
+        <table>
+            <tr>
+                <td>
+                    PAGE : <span th:text="${list.getNumber}+1" style="color:red;"></span> / <span th:text="${list.getTotalPages}"></span>
+                </td>
+            </tr>
+        </table>
+        <table  class="table" align="center">
+            <tr>
+                <th>아이디</th>
+                <th>내용</th>
+            </tr>
+            <tr th:each="dto:${list}">
+                <td th:text="${dto.id}"></td>
+<!--                <td >    <a  th:href="@{/read.do(num=${dto.num})}" th:text="${dto.subject}"> </a>     </td>-->
+                <td th:text="${dto.memoText}"></td>
+            </tr>
+        </table>
+    </th:block>
+
+</div>
+
+</body>
+</html>
